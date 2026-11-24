@@ -25,7 +25,9 @@
             <ul>
                 <li><a href="#profil">Profile</a></li>
                 <li><a href="#jadwal">Academic</a></li>
-                <li><a href="#contact">Conctact</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#technical">Technical</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -98,6 +100,147 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <article class="project-card">
+                <div class="project-heading">
+                    <div>
+                        <h3>CampusTask</h3>
+                        <p class="project-subtitle">
+                            University Assignment Management
+                        </p>
+                    </div>
+                    <span class="project-status">Live</span>
+                </div>
+
+                <p>
+                    CampusTask is a web-based application designed to help
+                    university students organize academic assignments, manage
+                    deadlines, track task progress, and prioritize coursework.
+                </p>
+
+                <div class="tech-stack">
+                    <span>TypeScript</span>
+                    <span>Vite</span>
+                    <span>Tailwind CSS</span>
+                    <span>LocalStorage</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://campus-task-seven.vercel.app"
+                    target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        Open Live App
+                    </a>
+
+                    <a href="https://github.com/fathurVoid/campusTask"
+                    target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i>
+                        Source Code
+                    </a>
+                </div>
+
+                <h3>Live Application Preview</h3>
+
+                <div class="app-preview">
+                    <iframe
+                        src="https://campus-task-seven.vercel.app"
+                        title="CampusTask Application"
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+                <p class="preview-note">
+                    If the embedded application is unavailable,
+                    use the Open Live App link above.
+                </p>
+            </article>
+        </section>
+
+        <hr>
+
+        <section id="technical">
+            <h2>Technical Implementation</h2>
+
+            <p>
+                CampusTask was developed using modern web development tools
+                and practices. The following technologies were used throughout
+                the development process.
+            </p>
+
+            <div class="technical-grid">
+
+                <article class="technical-card">
+                    <h3>Git and GitHub</h3>
+                    <p>
+                        Git is a distributed version control system used to
+                        track source code changes. GitHub hosts the repository
+                        and supports collaboration through branches and
+                        pull requests. Development involved creating branches,
+                        committing changes, merging pull requests, and resolving
+                        merge conflicts.
+                    </p>
+                </article>
+
+                <article class="technical-card">
+                    <h3>npm</h3>
+                    <p>
+                        npm is a package manager used to install and manage
+                        project dependencies. The package.json file defines
+                        dependencies, development dependencies, and scripts
+                        such as development, type checking, and production builds.
+                    </p>
+                </article>
+
+                <article class="technical-card">
+                    <h3>TypeScript</h3>
+                    <p>
+                        TypeScript extends JavaScript with static typing.
+                        CampusTask uses primitive types, arrays, interfaces,
+                        type aliases, union types, and generics to improve
+                        code reliability and maintainability.
+                    </p>
+                </article>
+
+                <article class="technical-card">
+                    <h3>Vite</h3>
+                    <p>
+                        Vite provides the local development server and
+                        production build process. It offers fast development
+                        feedback and processes application modules and assets
+                        for deployment.
+                    </p>
+                </article>
+
+                <article class="technical-card">
+                    <h3>Compiler, Transpiler, and Bundler</h3>
+                    <p>
+                        The TypeScript compiler (tsc) checks types and reports
+                        errors before production builds. TypeScript is also
+                        transformed into JavaScript. Vite uses its build
+                        pipeline to bundle application modules and assets
+                        into optimized production files.
+                    </p>
+                </article>
+
+                <article class="technical-card">
+                    <h3>Environment Variables</h3>
+                    <p>
+                        Environment variables separate application
+                        configuration from source code. CampusTask uses
+                        variables such as VITE_APP_NAME, VITE_APP_VERSION,
+                        VITE_APP_ENV, and VITE_BASE_PATH. The .env.example
+                        file documents the required configuration, while
+                        the local .env file is excluded from Git.
+                    </p>
+                </article>
+
             </div>
         </section>
 
