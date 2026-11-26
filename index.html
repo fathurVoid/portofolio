@@ -161,6 +161,69 @@
                     use the Open Live App link above.
                 </p>
             </article>
+
+            <article class="project-card">
+                <div class="project-heading">
+                    <div>
+                        <h3>Product Catalog</h3>
+                        <p class="project-subtitle">
+                            Product Discovery and Management Application
+                        </p>
+                    </div>
+                    <span class="project-status">Live</span>
+                </div>
+
+                <p>
+                    Product Catalog is a web application for browsing and
+                    exploring products from a public API. It provides product
+                    search, category filtering, sorting, pagination, dynamic
+                    product details, and saved products. Users can also add
+                    their own local products through a validated form. Saved
+                    products and locally created products persist using browser
+                    LocalStorage.
+                </p>
+
+                <div class="tech-stack">
+                    <span>React</span>
+                    <span>TypeScript</span>
+                    <span>Vite</span>
+                    <span>React Router DOM</span>
+                    <span>Axios</span>
+                    <span>Context API</span>
+                    <span>DummyJSON API</span>
+                    <span>LocalStorage</span>
+                    <span>Custom CSS</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://store-sukses.vercel.app/products"
+                    target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        Open Live App
+                    </a>
+
+                    <a href="https://github.com/fathurVoid/storeSukses"
+                    target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i>
+                        Source Code
+                    </a>
+                </div>
+
+                <h3>Live Application Preview</h3>
+
+                <div class="app-preview">
+                    <iframe
+                        src="https://store-sukses.vercel.app/products"
+                        title="Product Catalog Application Preview"
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+                <p class="preview-note">
+                    If the embedded application is unavailable,
+                    use the Open Live App link above.
+                </p>
+            </article>
         </section>
 
         <hr>
@@ -172,6 +235,13 @@
                 CampusTask was developed using modern web development tools
                 and practices. The following technologies were used throughout
                 the development process.
+            </p>
+
+            <p>
+                Product Catalog extends this stack with React and TypeScript.
+                Its architecture separates UI, routing, state, data access, and
+                persistence into focused modules; the cards below describe the
+                implementation in more detail.
             </p>
 
             <div class="technical-grid">
@@ -238,6 +308,59 @@
                         VITE_APP_ENV, and VITE_BASE_PATH. The .env.example
                         file documents the required configuration, while
                         the local .env file is excluded from Git.
+                    </p>
+                </article>
+
+                <article class="technical-card">
+                    <h3>Product Catalog: React and TypeScript Architecture</h3>
+                    <p>
+                        Product Catalog is built with React 19 and TypeScript.
+                        Typed product models, props, and form state are shared
+                        across components, pages, hooks, services, context, and
+                        utilities so API and locally created products use one
+                        normalized shape. Styling uses custom CSS tokens rather
+                        than a component library.
+                    </p>
+                </article>
+
+                <article class="technical-card">
+                    <h3>Product Catalog: Routing and State Management</h3>
+                    <p>
+                        React Router DOM defines nested routes under a shared
+                        RootLayout with &lt;Outlet /&gt;. Routes include
+                        /products, /products/new, dynamic /products/:productId,
+                        /saved, and a catch-all NotFoundPage. URL state uses
+                        useSearchParams for q, category, sortBy, order, page,
+                        and limit. Local state handles the debounced search box
+                        and controlled form, while SavedProductsContext shares
+                        favorites through the Context API.
+                    </p>
+                </article>
+
+                <article class="technical-card">
+                    <h3>Product Catalog: Data Fetching and Custom Hooks</h3>
+                    <p>
+                        A single Axios client requests DummyJSON products,
+                        search results, categories, and details. Custom hooks
+                        useProducts, useProductDetail, useCategories,
+                        useDebounce, and useLocalProducts manage server state,
+                        cancellation with AbortController, loading, error, and
+                        empty states, plus local persistence. Service functions
+                        normalize API responses and handle failed requests.
+                    </p>
+                </article>
+
+                <article class="technical-card">
+                    <h3>Product Catalog: Persistence and Separation of Concerns</h3>
+                    <p>
+                        SavedProductsContext persists favorites to
+                        storeSukses:savedProducts:v1, while locally created
+                        products use storeSukses:localProducts:v1. Reusable
+                        components such as ProductCard, ProductGrid, SearchBar,
+                        CategoryFilter, Pagination, StatCards, and
+                        ConfirmDialog are composed by pages; services, types,
+                        and utilities keep data access and validation separate
+                        from presentation.
                     </p>
                 </article>
 
